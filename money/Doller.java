@@ -2,11 +2,11 @@ package money;
 
 public class Doller extends Money{
 
-    Doller(int amount) {
-        this.amount = amount;
+    Doller(int amount, String currency) {
+        super(amount, currency);
     }
 
     Money times(int multiplier) {
-        return new Doller(amount * multiplier);
+        return Money.dollar(amount * multiplier);
     }
 }
