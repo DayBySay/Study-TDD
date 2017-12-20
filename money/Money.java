@@ -14,12 +14,12 @@ public class Money {
         return amount == money.amount && currency().equals(money.currency());
     }
 
-    static public Doller dollar(int amount) {
-        return new Doller(amount, "USD");
+    static public Money dollar(int amount) {
+        return new Money(amount, "USD");
     }
 
-    static public Franc franc(int amount) {
-        return new Franc(amount, "CHF");
+    static public Money franc(int amount) {
+        return new Money(amount, "CHF");
     }
 
     Money times(int multiplier) {
