@@ -15,7 +15,12 @@ public class Sum implements Expression {
     }
 
     @Override
-    public Expression plus(Expression tenFrancs) {
-        return null;
+    public Expression plus(Expression added) {
+        return new Sum(this, addend);
+    }
+
+    @Override
+    public Expression times(int multiPlier) {
+        return new Sum(augend.times(multiPlier), addend.times(multiPlier));
     }
 }
